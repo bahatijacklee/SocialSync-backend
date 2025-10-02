@@ -1,0 +1,16 @@
+.env*
+/node_modules
+/dist
+/build
+/coverage
+/logs
+/temp
+/cache
+/backup
+Backend_plan.md
+integrations.markdown
+storage.markdown
+architecture.markdown
+.DS_Store
+.vscode 
+
