@@ -8,7 +8,7 @@ const accountSchema = new mongoose.Schema({
   },
   platform: {
     type: String,
-    enum: ['linkedin', 'twitter', 'instagram', 'facebook'],
+    enum: ['linkedin', 'x', 'instagram', 'facebook'],
     required: true
   },
   platformId: {

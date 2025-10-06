@@ -4,7 +4,7 @@ const axios = require('axios');
 class TwitterService {
   constructor() {
     // Log the first few characters of the API key to verify it's being loaded
-    console.log('Twitter API Key (first 4 chars):', process.env.TWITTER_API_KEY?.substring(0, 4));
+    console.log('X API Key (first 4 chars):', process.env.TWITTER_API_KEY?.substring(0, 4));
     
     this.client = new TwitterApi({
       appKey: process.env.TWITTER_API_KEY,
@@ -62,7 +62,7 @@ class TwitterService {
         })),
       };
     } catch (error) {
-      console.error('Twitter API Error Details:', {
+      console.error('X API Error Details:', {
         message: error.message,
         code: error.code,
         data: error.data,
@@ -104,14 +104,14 @@ class TwitterService {
         neutral: Math.round((sentiment.neutral / total) * 100),
       };
     } catch (error) {
-      console.error('Twitter API Error:', error);
+      console.error('X API Error:', error);
       throw error;
     }
   }
 }
 
 function getAuthUrl() {
-  // Replace with your actual Twitter Auth URL logic (OAuth 1.0a or OAuth 2.0)
+  // Replace with your actual X (Twitter) Auth URL logic (OAuth 1.0a or OAuth 2.0)
   // This is a simplified example for OAuth 2.0 PKCE
   const clientId = process.env.TWITTER_CLIENT_ID;
   const redirectUri = encodeURIComponent(process.env.TWITTER_REDIRECT_URI);
@@ -124,15 +124,15 @@ function getAuthUrl() {
 
 // Add stubs for other necessary functions if they don't exist
 async function getAccessToken(code) {
-   console.warn('Twitter getAccessToken stub called');
-   // Implement real token exchange with Twitter API
-   return { access_token: 'mock_twitter_token', expires_in: 7200, refresh_token: 'mock_refresh_token' };
+   console.warn('X getAccessToken stub called');
+   // Implement real token exchange with X (Twitter) API
+   return { access_token: 'mock_x_token', expires_in: 7200, refresh_token: 'mock_refresh_token' };
 }
 
 async function getUserProfile(accessToken) {
-   console.warn('Twitter getUserProfile stub called');
-    // Implement real profile fetching with Twitter API
-   return { id: 'mock_twitter_id', username: 'mockuser' };
+   console.warn('X getUserProfile stub called');
+    // Implement real profile fetching with X (Twitter) API
+   return { id: 'mock_x_id', username: 'mockuser', name: 'Mock User' };
 }
 
 module.exports = {

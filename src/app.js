@@ -75,7 +75,7 @@ app.use('/api/accounts', metaRoutes);
 const linkedinRoutes = require('./routes/linkedinRoutes');
 app.use('/api/accounts', linkedinRoutes);
 
-const twitterRoutes = require('./routes/twitterRoutes');
+const twitterRoutes = require('./routes/twitterRoutes'); // X (formerly Twitter) routes
 app.use('/api/accounts', twitterRoutes);
 
 // Then mount the more general account routes
